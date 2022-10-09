@@ -1,0 +1,59 @@
+@import '@assets/css/global.less';
+
+.backHeader{
+    padding: 8px @normal-gap;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0px;
+    transition: all .15s linear;
+    height: 48px;
+
+    &-collapsed {
+        // left: 180px;
+        position: absolute;
+        left: 0
+    }
+
+    // border-bottom: 1px solid @page-title-line-color;
+    &-left{
+        .flex(row, flex-start, center);
+        &-href{
+            .flex(row, flex-start, center);
+            cursor: pointer;
+            .font(14px, #818895, PingFangSC-Regular);
+            i{
+                margin:0 5px;
+            }
+            margin-right:20px;
+            &:hover {
+                color: @theme;
+                svg {
+                    color: @theme;
+                }
+            }
+
+            &-icon {
+                margin-right: 5px;
+                font-size: 16px;
+            }
+        }
+        &-title{
+            font-family: PingFangSC-Regular;
+            font-size: 16px;
+            color: #151B26;
+            letter-spacing: 0;
+            line-height: 20px;
+            font-weight: 400;
+        }
+    }
+
+    &-container {
+        position: relative;
+        height: 48px;
+    }
+}

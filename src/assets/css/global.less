@@ -1,0 +1,146 @@
+@import './common.less';
+.font(@fontSize: 12px, @color: '#fff', @fontFamily: 'PingFangSC-Medium') {
+    font-size: @fontSize;
+    color: @color;
+    font-family: @fontFamily;
+}
+.ant-btn[disabled] {
+    background: #F7F7F9;
+    color: #B8BABF;
+    border: 1px solid #F7F7F9;
+}
+.flex(@flexDirection: row, @rowAlign: flex-start, @colAlign: center) {
+    display: flex;
+    flex-direction: @flexDirection;
+    justify-content: @rowAlign;
+    align-items: @colAlign;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover{
+    border-color: #144BCC;
+}
+.ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused {
+    border-color: #144BCC;
+}
+.ant-input-suffix {
+    color: #84868C;
+}
+.ant-radio-inner {
+    top: -2px;
+}
+.ant-drawer-title {
+    font-size: 16px;
+}
+.ant-form-item-extra {
+    margin-top: 4px;
+} 
+.ant-picker-cell .ant-picker-cell-inner {
+    text-align: center;
+}
+.ant-radio-inner::after {
+    top: 3px;
+    left: 3px;
+}
+.ant-upload-list-item {
+    display: none;
+}
+.ant-checkbox-checked::after {
+    border: none;
+}
+.ant-checkbox-inner, .ant-radio {
+    top: -15px;
+}
+.ant-form-item-label > label {
+    color: #5C5F66;
+}
+.ant-form-item-label > label .ant-form-item-tooltip {
+    cursor: pointer;
+    &:hover {
+        color: @theme;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+// add by jc 2021/3/27
+.hidden-scroll {
+    scrollbar-width: 0px;
+    scrollbar-width: thin;
+    // 滚动条
+    &::-webkit-scrollbar {
+        width: 0px;  
+        height: 0;  
+    }
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+
+.ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+
+.multi-ellipse(@row) {
+    overflow: hidden;
+    display: -webkit-box; // 将元素设为盒子伸缩模型显示
+    -webkit-box-orient: vertical; // 伸缩方向设为垂直方向
+    -webkit-line-clamp: @row; // 超出3行隐藏，并显示省略号
+    word-break: break-all;
+}
+
+.global-tooltip {
+    &-tooltip {
+        max-width: 500px;
+        .ant-tooltip-inner {
+            max-height: 100px;
+            overflow-y: auto;
+        }
+    }
+}
+
+@pageHorizon: 16px;
+
+.pageTitleShadow {
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.20);
+}
+
+.com-scrollbar {
+    &::-webkit-scrollbar-track {
+        width: 8px;
+        border-radius: 4px;
+        background-color: transparent;
+        height: 38px;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 8px;
+        // background-color: #1C89FF;
+        background-color: #CECFD1;
+        border-radius: 4px;
+        height: 38px;
+    }
+    &::-webkit-scrollbar {
+        width: 8px;
+        overflow: hidden;
+        opacity: 0.6;
+        height: 38px;
+    }
+}
+
+.com-form {
+    .ant-form-item-explain {
+        line-height: 20px;
+        min-height: 20px;
+    }
+
+    .ant-form-item-with-help {
+        margin-bottom: 24px;
+    }
+}

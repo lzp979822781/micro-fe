@@ -1,0 +1,32 @@
+@import '@assets/css/global.less';
+
+.com-select-common-item {
+    .flex(row, flex-start, center);
+    height: 32px;
+    padding-left: 10px;
+
+    .ant-checkbox {
+        top: 8px;
+    }
+}
+
+.com-select-all-panel {
+    padding: 4px 0;
+    box-shadow: 0 4px 5px 0 rgba(8,14,26,0.06), 0 1px 10px 0 rgba(8,14,26,0.05), 0 2px 4px -1px rgba(8,14,26,0.04);
+    border-radius: 4px;
+
+    .ant-checkbox-group {
+        display: block;
+    }
+
+    &-all {
+        .com-select-common-item();
+    }
+
+    &-option {
+        .ant-checkbox-wrapper {
+            .com-select-common-item();
+            display: flex;
+        }
+    }
+}

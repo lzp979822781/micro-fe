@@ -1,0 +1,30 @@
+@import '@assets/css/global.less';
+
+.com-drawer {
+    &.ant-drawer .ant-drawer-content {
+        .ant-drawer-body {
+            text-align: left;
+            // padding: 0;
+            &::-webkit-scrollbar{
+                width: 0;
+            }
+        }
+
+        .ant-drawer-header {
+            .ant-drawer-close {
+                align-items: center;
+                line-height: 0;
+            }
+        }
+    }
+
+    &-footer {
+        height: 64px;
+        padding-right: 24px;
+        .flex(row, flex-end, center);
+        &-sure {
+            margin-left: 10px;
+        }
+    }
+    
+}

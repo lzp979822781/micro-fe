@@ -1,0 +1,26 @@
+@import '@assets/css/global.less';
+
+.com-table-status {
+    .flex(row, flex-start, center);
+    min-width: 80px;
+
+    &-icon {
+        margin-right: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+    }
+
+    &-text {
+        .flex(row, flex-start, center);
+        .font(12px, #000, PingFangSC-Regular);
+        font-weight: 400;
+        &-icon.anticon {
+            margin-left: 10px;
+            height: 22px;
+            width: 12px;
+            font-size: 12px;
+            .flex(row, flex-start, center);
+        }
+    }
+}

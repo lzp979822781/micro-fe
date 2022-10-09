@@ -1,0 +1,221 @@
+@import '@assets/css/global.less';
+
+@color-success: #1890ff;
+@color-error: #ff4d4f;
+@color-validate-error: #F33E3E;
+
+.auto-upload {
+    .ant-modal-body{
+        margin: 24px 24px 16px 24px;
+    }
+    .ant-modal-content .ant-modal-body {
+        display: block !important;
+    }
+    // height: 223px;
+
+    .ant-modal-content {
+        border-radius: 6px;
+        .ant-modal-header {
+            .ant-modal-title {
+                color: #333;
+            }
+            border-bottom: none;
+        }
+
+        .ant-modal-footer {
+            border-top: none;
+        }
+    }
+
+    &-alert {
+        margin-bottom: 16px;
+        &-download {
+            .font(12px, rgba(0,0,0,.85), PingFangSC-Regular);
+            line-height: 30px;
+            &-text {
+                color: @theme;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &-body {
+        .flex(row, flex-start, flex-start);
+        flex: 1;
+
+        &-title {
+            .font(12px, #666666, PingFangSC-Regular);
+            line-height: 30px;
+            min-width: 52px;
+            &-star {
+                width: 10px;
+                height: 20px;
+            }
+        }
+
+        &-right {
+            .flex(row, flex-start, flex-start);
+            &-upload {
+                &-text {
+                    .font(12px, #333333, PingFangSC-Regular);
+                    color: #333333 !important;
+                    line-height: 30px;
+                }
+                svg{
+                    width: 14px;
+                    height: 14px;
+                    position: relative;
+                    top:2px;
+                    margin-right: 5px;
+                }
+            }
+            .ant-btn > .anticon + span{
+                margin-left: 4px;
+            }
+            .ant-btn > span{
+                vertical-align: middle;
+            }
+            .ant-btn:focus{
+                border-color: #d9d9d9;
+                color: #333333
+            }
+            .ant-btn:hover{
+                color: #4f90ff;
+                border-color: #4f90ff;
+                background: #fff;
+            }
+
+        }
+
+        &-prompt {
+            line-height: 20px;
+            margin-top: 10px;
+            .font(12px, #999999, PingFangSC-Regular);
+        }
+
+        &-container {
+            margin-left: 32px;
+            flex: 1;
+        }
+        &-mes{
+            background: #FFFFFF;
+            border: 1px solid #E8E9EB;
+            border-radius: 6px;
+            padding: 0 10px;
+        }
+        &-panel{
+            padding: 2px 4px;
+            cursor: pointer;
+            &:hover{
+                background-color: #f7f7f9;
+            }
+        }
+    }
+
+    &-progress {
+        margin-top: -4px;
+    }
+    .ant-progress-status-success .ant-progress-bg{
+        background-color: #2468F2;
+    }
+    .ant-progress-text{
+        color: #2468F2;
+    }
+    .ant-progress-text{
+        display: none;
+    }
+    .ant-progress-show-info .ant-progress-outer{
+        margin: 0;
+        padding: 0;
+    }
+
+    .ant-upload-list.ant-upload-list-text {
+        display: none;
+    }
+
+    &-file {
+        &-icon {}
+        &-text {
+            padding: 0 8px;
+            .font(12px, rgba(0,0,0,.85), PingFangSC-Regular);
+        }
+
+        &-del {
+            flex: 1;
+            .flex(row, flex-end, center);
+            display: none;
+            svg{
+                color: #84868C;
+                &:hover{
+                    color: #151B26
+                }
+            }
+        }
+    }
+
+    &-file-selected, &-file-selected-success, &-file-selected-error {
+        .flex(row, flex-start, center);
+        &:hover{
+            .auto-upload-file-del{
+                display: flex;
+            }
+        }
+    }
+
+    &-file-selected-success {
+        .modal-file {
+            &-text {
+                color: @color-success;
+            }
+        }
+    }
+
+    &-file-selected-error {
+        .modal-file {
+            &-icon, &-del, &-text {
+                color: @color-error;
+                svg {
+                    color: @color-error;
+                }
+            }
+        }
+    }
+
+    &-partial {
+        .font(12px, rgba(0,0,0,.85), PingFangSC-Regular);
+        height: 89px;
+        overflow-y: auto;
+        width: calc(100% - 1.714em - 8px);
+        p{
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+    }
+
+    &-error {
+        margin-top: 5px;
+        .font(12px, @color-error, PingFangSC-Regular);
+    }
+
+    .ant-popover-buttons {
+        .flex(row, flex-end, center);
+        width: 160px;
+    }
+
+    &-message {
+        z-index: 9999;
+    }
+
+    // 校验错误提示信息
+    &-msg {
+        &-error {
+            color: @color-validate-error;
+        }
+    }
+
+    &-hide {
+        display: none;
+    }
+}

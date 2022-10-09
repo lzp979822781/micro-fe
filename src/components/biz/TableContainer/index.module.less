@@ -1,0 +1,21 @@
+@import '@assets/css/global.less';
+@outerSpace: @4p;
+
+.table-container {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3 * @p 6 * @p;
+    // min-height: inherit;
+    // height: 100%;
+    flex: 1;
+
+    &-container {
+        // overflow: hidden;
+        // 减去head高度和底部间距
+        min-height: calc(100% - 64px);
+        margin: @outerSpace;
+        padding-bottom: @4p;
+        display: flex;
+        flex-direction: column;
+    }
+}

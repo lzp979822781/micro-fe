@@ -1,0 +1,58 @@
+@import '@assets/css/global.less';
+
+@size: 128px;
+.upload-image {
+    position: relative;
+    width: @size;
+    min-height: @size;
+    .flex(row, center, center);
+
+    &-img {
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+
+    &:hover {
+        .upload-image-hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, .5);
+        }
+    }
+
+    &-hover {
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 0;
+        width: @size;
+        // height: @size;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, .6);
+        text-align: center;
+        line-height: @size;
+
+        &-del {
+            margin-left: 10px;
+            cursor: pointer;
+            path {
+                fill:#fff;
+            }
+        }
+        &-del:hover {
+            path {
+                fill:#ccc;
+            }
+        }
+        svg {
+            color: #fff;
+            width: 16px;
+            height: 16px;
+            &:hover{
+                color: #ccc;
+            }
+        }
+    }
+}

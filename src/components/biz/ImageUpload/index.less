@@ -1,0 +1,26 @@
+@import '@assets/css/global.less';
+
+@size: 128px;
+.image-upload {
+    &-btn {
+        width: @size;
+        height: @size;
+        .flex(column, center, center);
+        background-color: #fff;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: border-color .3s;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            color: #83868C;
+        }
+    }
+
+    &-description {
+        margin-top: 5px;
+        .font(12px, #83868C, PingFangSC-Regular);
+    }
+}

@@ -1,0 +1,23 @@
+@import '@assets/css/global.less';
+@tagColor: #F2F3F3;
+@tagDisabldColor: #E6E6E8;
+
+.com-select-tag {
+
+    &.ant-tag {
+        background-color: @tagColor;
+        border: 1px solid @tagColor;
+        border-radius: 2px;
+        .flex(row, flex-start, center);
+    }
+
+    &-label {
+        // max-width: 58px;
+        .ellipse();
+    }
+
+    &-disabled.ant-tag {
+        border-color: @tagDisabldColor;
+        background-color: @tagDisabldColor;
+    }
+}

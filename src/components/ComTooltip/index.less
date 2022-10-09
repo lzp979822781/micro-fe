@@ -1,0 +1,25 @@
+.base-tooltip {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    &-shadow {
+        display: inline-block;
+        color: transparent;
+        background-color: transparent;
+        position: fixed;
+        margin-top: -999999px;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &-overlay {
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,37 @@
+/**
+ * @file 
+ * @author zhangzhe
+ */
+
+.du-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    text-align: center;
+    .notfound-image {
+        width: 600px;
+        height: 277px;
+        background: url('/static/img/404.png') no-repeat;
+        background-size: 100% 100%;
+        display: inline-block;
+    }
+    .content {
+        .http-status {
+            color: #333;
+            font-size: 72px;
+            font-weight: 600;
+            line-height: 72px;
+            margin-bottom: 24px;
+        }
+        .http-text {
+            color: #999;
+            font-size: 16px;
+            margin-bottom: 16px;
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}

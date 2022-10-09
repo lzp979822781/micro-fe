@@ -1,0 +1,40 @@
+.flex(@flexDirection: row, @rowAlign: flex-start, @colAlign: center) {
+    display: flex;
+    flex-direction: @flexDirection;
+    justify-content: @rowAlign;
+    align-items: @colAlign;
+}
+
+.base-tooltip {
+    .flex(row, flex-start, center);
+
+    &-shadow {
+        display: inline-block;
+        color: transparent;
+        background-color: transparent;
+        position: fixed;
+        margin-top: -999999px;
+        white-space: nowrap;
+        max-width: 999999px;
+    }
+
+    &-container {
+        .flex(row, flex-start, center);
+    }
+
+    &-overlay {
+        max-width: 400px;
+        .ant-tooltip-content {
+            position: static;
+            .ant-tooltip-inner {
+                word-break: break-all;
+            }
+        }
+        .ant-tooltip-arrow-content {
+            // transform: none !important;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

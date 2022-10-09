@@ -1,0 +1,35 @@
+@import '@assets/css/global.less';
+
+.click-text {
+    color: @theme;
+
+    word-break: break-all;
+    overflow: hidden;
+    display: -webkit-box;//将元素设为盒子伸缩模型显示
+    -webkit-box-orient: vertical;//伸缩方向设为垂直方向
+    -webkit-line-clamp: 1;//超出3行隐藏，并显示省略号
+
+    &-1 {
+        // -webkit-line-clamp: 1;
+        .ellipse();
+    }
+
+    &-2 {
+        -webkit-line-clamp: 2;
+    }
+
+    &-3 {
+        -webkit-line-clamp: 3;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-disabled {
+        color: #B4B6BA;
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="20px" viewBox="0 0 8 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>3.数据输入/表单/红色星号</title>
+    <g id="3.数据输入/表单/红色星号" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" stroke="#979797" fill="#D8D8D8" opacity="0" x="0.5" y="0.5" width="7" height="19"></rect>
+        <polygon id="*" fill="#E8684A" points="5.368 10.688 6.016 10.172 4.55768679 8.408 6.736 7.748 6.472 6.956 4.42 7.63004639 4.42 5.432 3.58 5.432 3.58 7.63004639 1.528 6.956 1.264 7.748 3.41301982 8.408 1.984 10.172 2.632 10.688 4 9.01719614"></polygon>
+    </g>
+</svg>

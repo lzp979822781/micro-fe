@@ -1,0 +1,56 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "module": "esnext", // 用于指定模块的代码生成规则
+        "target": "es2018", // 用于指定生成代码的兼容版本
+        "lib": [
+            "es2018",
+            "dom",
+            "es7",
+            "es6",
+            "es5"
+        ], // 编译过程中需要引入的库文件的列表
+        "sourceMap": false,
+        "allowJs": true,
+        "noEmit": false, // 表示当发生错误的时候,编译器不会生产JavaScript代码
+        "jsx": "react-jsx",
+        "moduleResolution": "node",
+        "strict": true, // 启用所有严格类型检查选项
+        "noUnusedLocals": false, // 不允许未使用的局部变量
+        "suppressImplicitAnyIndexErrors": true, // 阻止 --noImplicitAny对缺少索引签名的索引对象报错。查看 issue #1232了解详情。
+        "importHelpers": true, // 从 tslib 导入辅助工具函数
+        "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用。
+        "removeComments": true, // 删除所有注释，除了以 /!*开头的版权信息。
+        "esModuleInterop": true, // 可调用的CommonJS模块必须被做为默认导入
+        "experimentalDecorators": true, // 启用实验性的ES装饰器
+        "noUnusedParameters": false, // 不允许有未使用的参数
+        "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
+        "skipLibCheck": true,
+        "paths": {
+            "@src/*": ["src/*"],
+            "@components/*": ["src/components/*"],
+            "@routes/*": ["src/routes/*"],
+            "@pages/*":["src/pages/*"],
+            "@assets/*":["src/assets/*"],
+            "@images/*":["src/assets/images/*"],
+            "@redux/*":["src/redux/*"],
+            "@sse/*":["src/server/sse/*"]
+        },
+        "typeRoots": [
+            "node_modules/@types",
+        ],
+        "noImplicitAny": false,
+        "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+    ],
+    "exclude": ["node_modules"],
+    "awesomeTypescriptLoaderOptions": {
+        "useWebpackText": true,
+        "useTranspileModule": true,
+        "doTypeCheck": true,
+        "forkChecker": true
+    }
+}

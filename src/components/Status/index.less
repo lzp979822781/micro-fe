@@ -1,0 +1,95 @@
+@prefix-status: ~"status";
+@green: #5FB333;
+@red: #EB5252;
+@yellow: #FFA500;
+@blue: #1890ff;
+@blue-hover: #40a9ff;
+@gray: #999;
+.@{prefix-status} {
+    display: inline-block;
+    .@{prefix-status}-type {
+        position: relative;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+        &.@{prefix-status}-type-success {
+            color: @green;
+            &::before {
+                background: @green;
+            }
+        }
+        &.@{prefix-status}-type-error {
+            color: @red;
+            &:before {
+                background: @red;
+            }
+        }
+        &.@{prefix-status}-type-warning {
+            color: @yellow;
+            &:before {
+                background: @yellow;
+            }
+        }
+        &.@{prefix-status}-type-unavailable {
+            color: @gray;
+            &:before {
+                background: @gray;
+            }
+        }
+        &.@{prefix-status}-type-pending {
+            padding-left: 36px;
+            position: relative;
+            &::before {
+                position: absolute;
+                background-color: @blue;
+                left: 18px;
+                top: 50%;
+                margin-top: -5px;
+                animation: du-animation-before 2s;
+                animation-iteration-count: infinite;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                left: 2px;
+                top: 50%;
+                margin-top: -5px;
+                border-radius: 50%;
+                background-color: @yellow;
+                animation: du-animation-after 2s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+
+    @keyframes du-animation-before {
+        0% {
+            left: 18px;
+        }
+        50% {
+            left: 2px;
+        }
+        100% {
+            left: 18px;
+        }
+    }
+    @keyframes du-animation-after {
+        0% {
+            left: 2px;
+        }
+        50% {
+            left: 18px;
+        }
+        100% {
+            left: 2px;
+        }
+    }
+}

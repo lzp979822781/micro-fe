@@ -1,0 +1,159 @@
+/* 顶部导航样式重新定义 */
+.header {
+    background: #FFF;
+    box-shadow: -1px 3px 10px -2px rgba(0, 0, 0, .2);
+    height: 56px;
+    z-index: 99;
+    display: flex;
+    padding: 0 16px;
+
+    &-hide {
+        display: none;
+    }
+
+    .logo {
+        height: 56px;
+        display: flex;
+        align-items: center;
+    }
+
+    .rightBtnContainer {
+        line-height: 56px;
+        margin-left: auto;
+        display: flex;
+
+        .avtar {
+            cursor: pointer;
+
+            .arrowBottom {
+                height: 16px;
+                width: 16px;
+                vertical-align: middle;
+                margin-left: 4px;
+                transition: transform .3s;
+                path {
+                    fill: #151B26;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    :global {
+        .ant-menu-horizontal {
+            border-bottom-color: transparent;
+        }
+
+        .ant-menu {
+            line-height: 56px;
+            margin-left: 60px;
+
+            li {
+                padding: 0 !important;
+                margin-right: 40px;
+            }
+        }
+
+        .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after {
+            width: 100%;
+            left: 0;
+            border-bottom: 2px solid #2468F2;
+        }
+        .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+        .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover {
+            color: #2468F2;
+        }
+    }
+}
+
+.avtarBox {
+    background: rgba(8, 14, 26, .5);
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+/* 个人中心dropDownMenu样式重新定义 */
+.overClassName {
+    top: 60px !important;
+    width: 280px;
+    background: #FFF;
+    box-shadow: 0 4px 5px 0 rgba(37, 38, 41, .06), 0 1px 10px 0 rgba(21, 26, 38, .05), 0 2px 4px -1px rgba(21, 26, 38, .04);
+    border-radius: 2px;
+    padding: 0 16px !important;
+
+    :global {
+        .ant-dropdown-menu {
+            padding-inline-start: 0;
+            padding: 0;
+            box-shadow: none;
+
+            .ant-dropdown-menu-item {
+                padding: 0;
+                font-size: 14px;
+                color: rgba(8, 14, 26, .95);
+                font-weight: 400;
+                line-height: 32px;
+
+                &:hover {
+                    background-color: #FFF;
+                }
+            }
+        }
+
+        .ant-avatar {
+            height: 24px;
+            width: 24px;
+            line-height: 24px;
+            margin-right: 9px;
+        }
+
+        .anticon {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+    }
+
+    .name {
+        vertical-align: middle;
+        padding: 8px 0 !important;
+        border-bottom: 1px solid rgba(8, 14, 26, .1);
+        margin-bottom: 8px;
+        line-height: 32px;
+        cursor: initial;
+    }
+
+    .clearMargin {
+        margin-bottom: 0;
+    }
+
+    .clearMargin {
+        margin-bottom: 0;
+    }
+
+    .loginOut {
+        padding: 8px 0;
+        text-align: center;
+        margin-top: 8px;
+        border-top: 1px solid rgba(8, 14, 26, .1);
+    }
+
+    .clearLoginMagin {
+        margin-top: 0;
+        border-top: 0;
+    }
+
+    .normal:hover,
+    .loginOut:hover {
+        color: #2468F2;
+    }
+}
+
+.activeDrop {
+    transform: rotateX(180deg);
+    path {
+        fill: #2468F2 !important;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,41 @@
+@import '@assets/css/global.less';
+
+.detail-grid {
+    .global-tooltip();
+    .ant-row{
+        row-gap: 5px !important;
+    }
+    &-content{
+        &-label {
+            .font(12px, #666, PingFangSC-Regular);
+            min-width: 80px;
+            display: inline-block;
+        }
+
+        &-value{
+            .font(12px, #000, PingFangSC-Regular);
+            word-break: break-all;
+            white-space: pre-wrap;
+            overflow-y: auto;
+            &-ellipse {
+                max-width: 220px;
+                .ellipse();
+            }
+        }
+        &-defalut{
+            opacity: 0.2;
+            color: #000000;
+        }
+
+        &-item {
+            .flex(row, flex-start, flex-start);
+            min-height: 20px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-hide {
+        display: none;
+    }
+}

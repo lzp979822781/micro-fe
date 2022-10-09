@@ -1,0 +1,57 @@
+@import '@assets/css/global.less';
+.com-table {
+    .ant-table-filter-dropdown .ant-checkbox-wrapper + span {
+        position: absolute;
+        top: 10px;
+    }
+    .ant-table-thead .ant-checkbox-inner {
+        top: -11px;
+    }
+    .ant-table-thead, .ant-table-body {
+        .ant-table-cell-fix-right, .ant-table-cell-fix-left {
+            z-index: 3;
+        }
+    }
+    .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+        height: 40px;
+        padding: 0 0 0 12px;
+    }
+    .ant-spin-nested-loading > div > .ant-spin{
+        top: 40px;
+        height: 80%;
+        background: #fff;
+    }
+    .ant-checkbox-checked::after {
+        border: none;
+    }
+
+    .ant-table-filter-column {
+        .ant-dropdown {
+            top: 44px !important;
+
+            .ant-dropdown-menu {
+                overflow-x: auto;
+                max-width: 600px;
+            }
+        }
+    }
+
+    &-filter-fixed {
+        .ant-table-content {
+            min-height: 360px;
+            border-radius: 6px 6px 0 0;
+        }
+    }
+    .ant-radio-inner {
+        top: -2px;
+    }
+    .ant-radio-inner::after{
+        top: 3px;
+        left: 3px;
+    }
+}
+.noBorder{
+    // .ant-table-tbody > tr > td{
+    //     border-bottom: 0;
+    // }
+}

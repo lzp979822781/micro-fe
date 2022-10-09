@@ -1,0 +1,28 @@
+@icon-size: 14px;
+@theme-color: #3280FA;
+.create-btn{
+    cursor: pointer;
+}
+.refresh-biz-button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        border-color: @theme-color;
+        svg {
+            color: @theme-color;
+        }
+    }
+
+    &-icon {
+        width: 20px;
+        height: 20px;
+        svg {
+            width: @icon-size;
+            height: @icon-size;
+        }
+    }
+}

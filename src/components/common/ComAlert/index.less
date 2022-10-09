@@ -1,0 +1,27 @@
+@import '@assets/css/global.less';
+
+@bg-color: #FFF4E6;
+@icon-color: #FAAD11;
+@height: 30px;
+.com-alert {
+    .flex(row, flex-start, flex-start);
+    height: @height;
+    background-color: @bg-color;
+    border-radius: 4px;
+    &-icon {
+        height: @height;
+        margin-left: 20px;
+        .flex(row, center, center);
+        span {
+            height: 100%;
+            .flex(row, center, center);
+        }
+        svg {
+            color: #FAAD11;
+        }
+    }
+
+    &-content {
+        margin-left: 16px;
+    }
+}

@@ -1,0 +1,59 @@
+@import '@assets/css/global.less';
+
+.baidu-acg-tab-container{
+    display: flex;
+    position: relative;
+    height: 53px;
+    box-sizing: border-box;
+    user-select: none;
+    // 下划线
+    // &::after{
+    //     content: "";
+    //     opacity: 0.3;
+    //     background: #A9B8D0;
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     height: 2px;
+    // }
+    // 标题
+    .baid-acg-tab-title{
+        opacity: 0.6;
+        font-family: PingFangSC-Regular;
+        font-size: 18px;
+        color: #191C3D;
+        text-align: left;
+        line-height: 34px;
+        margin-right: 30px;
+    }
+    // 文字内容
+    .baidu-acg-tab-content{
+        display: flex;
+        // margin: 0 0 0 -20px;
+        &-item{
+            font-family: PingFangSC-Medium;
+            font-size: 14px;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: 20px;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: color .2s linear;
+            position: relative;
+            animation: linear-in .2s linear;
+            display: flex;
+            align-items: center;
+            // 选中
+            &.is-select{
+                color: @theme;
+                position: relative;
+                border-bottom: 2px solid @theme;
+            }
+        }
+        @keyframes linear-in {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@borderColor: #4F86F4;
+
+.com-search{
+    .ant-input {
+        border-right: none;
+    }
+
+    .ant-input-search-button {
+        border-left: none !important;
+    }
+
+    .ant-input-group-addon {
+        width: 2px !important;
+    }
+
+    .ant-input-wrapper {
+        &:hover {
+            .ant-input, .ant-input-search-button {
+                border-color: @borderColor;
+            }
+        }
+    }
+
+    &-focus {
+        .ant-input-search-button {
+            border-color: @borderColor;
+        }
+    }
+}

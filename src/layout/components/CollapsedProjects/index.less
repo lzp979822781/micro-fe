@@ -1,0 +1,36 @@
+.collapsed-project-menu {
+    max-height: 300px;
+    overflow-y: scroll;
+    padding-bottom: 12px;
+    padding: 0 16px;
+    padding-top: 16px;
+
+    &-item {
+        padding-bottom: 16px;
+        width: 116px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        color: rgba(8, 14, 26, .95);
+        line-height: 20px;
+        font-weight: 400;
+        transition:
+            color .3s cubic-bezier(.645, .045, .355, 1),
+            border-color .3s cubic-bezier(.645, .045, .355, 1),
+            background .3s cubic-bezier(.645, .045, .355, 1),
+            padding .15s cubic-bezier(.645, .045, .355, 1);
+
+        &:hover {
+            color: #2468F2;
+        }
+    }
+
+    &-item-selected {
+        color: #2468F2;
+    }
+
+    &-item-clearPadding {
+        padding-bottom: 0;
+    }
+}

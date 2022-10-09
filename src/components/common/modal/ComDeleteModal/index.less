@@ -1,0 +1,81 @@
+@import '@assets/css/global.less';
+@iconSize: 20px;
+@closeIconSize: 16px;
+
+.com-delete-modal {
+
+    &-content {
+        &-prompt {
+            .flex(row, flex-start, flex-start);
+
+            &-container {
+                margin-left: 15px;
+            }
+
+            &-icon {
+                &.anticon {
+                    width: @iconSize;
+                    height: @iconSize;
+                    svg {
+                        width: @iconSize;
+                        height: @iconSize;
+                        color: #FFB95D;
+                    }
+                }
+            }
+
+            &-right {
+                flex: 1;
+                .flex(row, flex-end, flex-start);
+                &-close {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    &.anticon {
+                        width: @closeIconSize;
+                        height: @closeIconSize;
+                        svg {
+                            width: @closeIconSize;
+                            height: @closeIconSize;
+                            line-height: 22px;
+                            color: #84868C
+                        }
+                    }
+    
+                }
+            }
+
+            &-text {
+                .font(14px, #151B26,  PingFangSC-Medium);
+                line-height: 22px;
+                font-weight: 500;
+            }
+
+            &-desc {
+                .font(12px, #151B26,  PingFangSC-Regular);
+                margin-top: 9px;
+                line-height: 20px;
+                font-weight: 400;
+            }
+
+        }
+    }
+
+    &-footer {
+        &-cancel {
+            // display: none;
+        }
+    }
+
+    .ant-modal-footer {
+        border-top: none;
+        padding: 24px;
+    }
+    .ant-modal-content {
+        width: 400px;
+        height: 184px;
+    }
+    .ant-modal-body {
+        margin: 24px;
+    }
+}
