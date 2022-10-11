@@ -6,7 +6,6 @@
  * @FilePath: /blue-cli/src/pages/Home/index.js
  * @Description: 首页
  */
-import logo from '@images/blue-cli5.png';
 import {useHistory} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import {Button} from '@baidu/sstrd';
